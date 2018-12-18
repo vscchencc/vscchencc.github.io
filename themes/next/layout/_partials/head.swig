@@ -156,3 +156,5 @@
 {% endif %}
 
 {% include 'head/custom-head.swig' %}
+
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
