@@ -18,4 +18,4 @@ branches:
         - dev 
 env:
     global:
-      - GH_REF: github.com:cc-ch/cc-ch.github.io.git 
+      - GH_REF: github.com/cc-ch/cc-ch.github.io.git 
