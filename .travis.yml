@@ -8,7 +8,7 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "chencc"
+  - git config user.name "chenhan"
   - git config user.email "932322877@qq.com"
   - git add .
   - git commit -m "Travis CI Auto Update"
@@ -18,4 +18,4 @@ branches:
         - dev 
 env:
     global:
-        - GH_REF: git@github.com:cc-ch/cc-ch.github.io.git 
+      - GH_REF: github.com:cc-ch/cc-ch.github.io.git 
