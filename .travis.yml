@@ -6,7 +6,13 @@ script:
     - hexo clean
     - hexo g 
 after_script:
-    - hexo deploy
+  - cd ./public
+  - git init
+  - git config user.name "chencc"
+  - git config user.email "932322877@qq.com"
+  - git add .
+  - git commit -m "Travis CI Auto Update"
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master
 branches:
     only:
         - dev 
