@@ -15,7 +15,7 @@ after_script:
   - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master
 branches:
     only:
-        - dev 
+      - dev 
 env:
     global:
       - GH_REF: github.com/cc-ch/cc-ch.github.io.git 
