@@ -11,6 +11,19 @@ author: Chen cc
 language: zh-Hans
 timezone:
 
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 10
+  hub:
+  content: 'true'
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
