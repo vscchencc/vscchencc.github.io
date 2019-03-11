@@ -1,3 +1,9 @@
+---
+title: 重新起航
+date: 2019-3-11 14:54:25
+categories: JavaScript 
+top: true
+---
 # Javscript 事件捕捉、 事件冒泡
 
 事件是监听在某个DOM元素上的，但是js的DOM事件有捕获和冒泡的机制，所以事件处理不是我们想的那样简单
