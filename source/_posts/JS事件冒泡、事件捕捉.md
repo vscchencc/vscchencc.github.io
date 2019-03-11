@@ -2,7 +2,7 @@
 title: 事件捕捉、 事件冒泡
 date: 2019-3-11 14:54:25
 categories: JavaScript 
-top: true
+top: false
 ---
 # Javscript 事件捕捉、 事件冒泡
 
@@ -39,10 +39,10 @@ child.addEventListener('click',function(){
 },true);
 ```
 点击后打印结果为
-
-    parent
-    child
-    
+```[javascript]
+parent
+child
+```    
 
 ## 事件冒泡 (event bubbling)
 
@@ -69,9 +69,10 @@ child.addEventListener('click',function(){
 },false);
 ```
 点击后打印结果为
-
-    child
-    parent
+```[javascript]
+child
+parent
+```
 
 一般我们都不会传入第三个参数，第三个参数默认一般也都是false，也就是事件冒泡
 
