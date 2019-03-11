@@ -13,7 +13,7 @@ top: true
 ## 事件流
 首先我们要理解事件流，即JavaScript中，事件触发的这一系列的流程
 
-![事件流](../images/document/capture.png)
+![事件流](/images/document/capture.png)
 
 ## 事件捕获 (event capturing)
 
