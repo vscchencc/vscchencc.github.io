@@ -9,6 +9,8 @@ top: false
 ## 一、mapbox-gl 介绍
 mapbox是目前地图领域很领先的一家公司，已为 Foursquare、Pinterest、Evernote、金融时报、天气频道、优步科技 等公司的网站提供了订制在线地图服务。Mapbox 是一些开放源代码地图库及应用程序的创建者或最大的贡献者，其中包含了MBTiles 规范、TileMill 制图 IDE、Leaflet JavaScript 库，以及 CartoCSS 地图格式化语言与语法分析器等。对于web端前端 GIS渲染引擎是Mapbox GL JS。由于公司项目处于内网环境，无法访问mapbox的地图服务，因此需要对mapbox进行本地化，以满足公司项目的需求。
 
+https://www.mapbox.com/
+
 ## 二、mapbox-gl 自定义样式
 
 * mapbox样式主要包括以上几个参数：
@@ -139,3 +141,5 @@ text-font下的Microsoft YaHei 为字体文件夹名称
 
 需要注意的是filter需要根据数据库字段进行筛选，其他具体可以看mapbox官方文档。
 具体其他相关操作mapbox官网有相关的demo
+
+https://docs.mapbox.com/mapbox-gl-js/api/
