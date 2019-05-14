@@ -169,3 +169,24 @@ zlib包同理
 
 
 {% asset_img finish.jpg  完成%}
+
+### 安装postgis2.0.1出错configure error: could not find gdal
+
+    *checking for library containing GDALAllRegister... no*
+    *configure: error: could not find gdal*
+
+解决方法：
+ 编译时 完之后，修改下列文件
+
+ 1./etc/ld.so.conf
+
+    include /etc/ld.so.conf.d/*.conf
+
+    /usr/local/pgsql/lib
+
+2.执行指令
+
+    /sbin/ldconfig –v
+
+
+再执行postgis的编译
