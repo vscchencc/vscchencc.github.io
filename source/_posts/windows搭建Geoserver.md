@@ -12,7 +12,7 @@ categories: 地图可视化
 
 ### 二、相关软件安装
 
-#### 1. postgresql + postGis
+#### 1. postgresql + postGis 安装
 
 PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提供如下空间信息服务功能:空间对象、空间索引、空间操作函数和空间操作符。同时，PostGIS遵循OpenGIS的规范。我们项目中主要使用它来保存原始矢量数据,后续可能需要通过PostGis对地理空间数据进行查找，筛选。
 下载安装相应版本的postgresql和postgis(本次搭建采用的是postgresql-9.6.10-1-windows-x64.exe和postgis-bundle-pg96x64-setup-2.3.7-1.exe)。
