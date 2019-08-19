@@ -82,7 +82,7 @@ top: false
         # chencc add
         host    all             all             0.0.0.0/0               password
 
-    {% asset_img pg_hbf.jpg 设置远程主机 %}
+    ![设置远程主机](pg_hbf.jpg)
 
 ### 13.修改防火墙，开发5432端口
     我在这里是直接将防火墙关闭，并且禁止使用了防火墙，实际操作，可能需要在设置开放5432端口
@@ -151,7 +151,7 @@ zlib包同理
     make
     make install
 
-{% asset_img configure.jpg %}
+![设置postgis](configure.jpg)
 
 登录psql，安装gis扩展
 
@@ -161,13 +161,14 @@ zlib包同理
     CREATE EXTENSION postgis_topology
 
 ## 出错
-{% asset_img postgisbug.jpg 添加插件报错 %}
+![添加插件报错](postgisbug.jpg)
 
     cp /opt/geos-3.7.1/lib/libgeos_c.so.1    /lib64/
     cp /opt/proj/lib/libproj.so.0    /lib64/
     cp /opt/gdal-2.1.1/lib/libgdal.so.20     /lib64/
 
 
+![完成](finish.jpg)
 {% asset_img finish.jpg  完成%}
 
 ### 安装postgis2.0.1出错configure error: could not find gdal

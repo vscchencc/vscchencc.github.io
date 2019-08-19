@@ -32,7 +32,7 @@ https://www.mapbox.com/
 
 mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太了解，在此介绍一下.pbf文件，.pbf文件的全称为Protocol Buffers，是Google公司开发的一种数据描述语言，类似于XML能够将结构化数据序列化，可用于数据存储、通信协议等方面。简单来说就是结构简单、速度快，和JSON之间的对比可以参考使用 Protocol Buffers 代替 JSON 的五个原因。
 
-{% asset_img font.jpg 字体 %}
+![字体](font.jpg)
 
 上面是微软雅黑的pbf字体库，如果想将把otf和ttf字体转换为Mapbox GL使用的protobuf格式的DF字体，可以使用mapbox开源的字体转换工具node-fontnik，具体使用方法可以参考官方文档
 
@@ -40,15 +40,15 @@ mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太
 
 访问mapbox地图服务我们可以从网络请求中查看官方样式中的sprite
 
-{% asset_img spritepng.jpg sprite %}
+![sprite](spritepng.jpg)
 
 同时还有一个sprite.json数据，用来描述sprite雪碧图
 
-{% asset_img spritejson.jpg spriteJson %}
+![spriteJson](spritejson.jpg)
 
 另外，需要更加地图zoom可能需要不同大小的sprite图片，为此mapbox用@2x,@3x等等分别表示2倍，3倍大小。
 
-{% asset_img sprite@2json.jpg sprite@2xJson %}
+![sprite@2json](sprite@2json.jpg)
 
 了解了mapbox是sprite原理以后，其本地化所要做的工作是将小图标合成一张sprite大图并在sprite.json中记录生成的位置信息，这里最主要的就是图标的摆放规则。
 

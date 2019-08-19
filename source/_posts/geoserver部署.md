@@ -48,16 +48,16 @@ Tomcat会自动帮我们解压war包，然后我们将war包删除，开始修�
 
 这里我设置的Tomcat 端口号为 8088
 
-{% asset_img tomcatport.jpg tomcat端口号 %}
+![tomcat端口号](tomcatport.jpg)
 
 最后直接访问地址，Geoserver 默认账号admin 密码是geoserver
 
-{% asset_img geoserver.jpg %}
+![geoserver](geoserver.jpg)
 
 这样，Geoserver 服务搭建就完成了
 
 ### 7. Geoserver 连接 postgis
 
-{% asset_img setData.jpg %}
+![setData](setData.jpg)
 
 设置 Geoserver 连接数据库 postgis

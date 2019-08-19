@@ -22,15 +22,15 @@ PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提�
  GeoServer 是 OpenGIS Web 服务器规范的 J2EE 实现，利用 GeoServer 可以方便的发布地图数据，允许用户对特征数据进行更新、删除、插入操作，通过 GeoServer 可以比较容易的在用户之间迅速共享空间地理信息。我们在GeoServer的基础上添加vector Tiles插件可以进行矢量切片。
 首先安装geoserver (本次安装的版本为geoserver-2.13.2.exe)，安装成功后打开geoserver web admin page（默认登录账户、密码为admin,geoserver），此时可以看到如下界面：
 
-{% asset_img Geoserver.png Geoserver服务 %}
+![Geoserver服务](Geoserver.png)
 
 接下来还需要安装geoserver vectortiles插件，该插件主要用来对数据进行矢量切片。需要下载geoserver对于的插件（本次安装的版本为：geoserver-2.13-SNAPSHOT-vectortiles-plugin.zip）。下载地址为http://geoserver.org/release/stable/
 
-{% asset_img geoserver-plugin.png Geoserver服务插件 %}
+![Geoserver服务插件](geoserver-plugin.png)
 
 下载成功以后将该文件解压到GeoServer服务器下GeoServer文件夹的WEB-INF的lib文件夹下，重启geoserver，此时重新打开geoserver web admin page，
 
-{% asset_img geoser-plu-set.png Geoserver服务插件 %}
+![Geoserver服务插件](geoser-plu-set.png)
 
 此时，我们发现可以进行矢量切片的相关设置，将前四个vertor layers选项勾上。
 
@@ -38,7 +38,7 @@ PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提�
 
 需要通过geoserver提高切片数据，需要进行跨域设置。找到GeoServer服务器下GeoServer文件夹的WEB-INF文件夹下的web.xml
 
-{% asset_img xml.png java跨域 %}
+![java跨域](xml.png)
 
 找到上面显示的两个配置，并将注释去掉，下载对应的跨域jar包（本项目下载的是jetty-servlets-9.2.13.v20150730.jar），最后重启geoserver服务器。
 
@@ -51,15 +51,15 @@ PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提�
 #### 1. 导入数据
 打开shp2pgsql-gui
 
-{% asset_img postgis.jpg postgis设置 %}    
+![postgis设置](postgis.jpg)
 
 打开后点击view connection detail，输入postgresql数据库username,password，serverhost,Database名称后点击ok，此时数据库连接成功。
 
-{% asset_img postgis-set.jpg postgis设置 %}  
+![postgis设置](postgis-set.jpg)
 
 接下来导入.shp数据，点击add files，选择相应的.shp文件
 
-{% asset_img postgis-data.jpg postgis导入数据 %}
+![postgis导入数据](postgis-data.jpg)
 
 点击import即可将数据导入到数据库，如果现实出现错误可能由于字符串编码的问题，此时可以通过option设置字符编码及其他设置。
 
@@ -67,46 +67,46 @@ PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提�
 
 #### 1. 新建工作区
 
-{% asset_img geoserver-new.jpg 新建工作区 %}
+![新建工作区](geoserver-new.jpg)
 
 #### 2. 新建数据源（postgresql数据源）
 
-{% asset_img geoserver-dta.jpg 新建数据源 %}
+![新建数据源](geoserver-dta.jpg)
 
-{% asset_img geo-postgis.jpg 新建数据源 %}
+![新建数据源](geo-postgis.jpg)
 
-{% asset_img geoser-postgis-set.jpg 新建数据源 %}
+![新建数据源](geoser-postgis-set.jpg)
 
 填写相关参数后，点击保存按钮。
 
 #### 3.添加图层
 
-{% asset_img geoser-layer.jpg 添加图层 %}
+![添加图层](geoser-layer.jpg)
 
-{% asset_img geoserver-layer-set.jpg 添加图层 %}
+![添加图层](geoserver-layer-set.jpg)
 
-{% asset_img geoserver-configure.jpg 添加图层 %}
+![添加图层](geoserver-configure.jpg)
 
-{% asset_img geoserver-configu.jpg 添加图层 %}
+![添加图层](geoserver-configu.jpg)
 
-{% asset_img geoser-configure1.jpg 添加图层 %}
+![添加图层](geoser-configure1.jpg)
 
 配置成功以后点击保存，此时重新点击图层以后，就好出现你已经发布的图层，如果需要对几个图层进行合并，可以建立一个图层组将几个图层进行合并。
 最后可以通过layer preview查看图层是否发布成功。
 
-{% asset_img layer-preview.jpg 预览图层 %}
+![添加图层](layer-preview.jpg)
 
-{% asset_img view-layer.jpg 预览图层 %}
+![添加图层](view-layer.jpg)
 
 #### 4.为了加快地图访问速度，可以对矢量切片进行缓存。
 
-{% asset_img cache-layer.jpg 缓存 %}
+![缓存](cache-layer.jpg)
 
-{% asset_img cachelayer1.jpg 缓存 %}
+![缓存](cachelayer1.jpg)
 
 可以选择切片等级以及切片的线程数后，点击submit，就可以在切片文件夹下查看切片文件。
 
-{% asset_img cache-layer2.jpg 缓存 %}
+![缓存](cache-layer2.jpg)
 
 注意，这里是在Windows上做缓存，问题影响不大，但是如果在linux做缓存，要注意如果切片文件夹过多，会有inode使用过多，会有inode占用100%，但是硬盘还有很大空间的情况
 
@@ -114,8 +114,8 @@ PostGIS是对象关系型数据库系统PostgreSQL的一个扩展，PostGIS提�
 
 可以从geoserver admin page查看支持那几种服务能力
 
-{% asset_img ability.jpg 服务能力 %}
+![服务能力](ability.jpg)
 
 以TMS为例，点击TMS，可以查看该服务的链接规范，在mapbox-gl中我们将使用到。
 
-{% asset_img ability2.jpg 服务能力 %}
+![服务能力](ability2.jpg)
