@@ -15,7 +15,7 @@ type: "about"
 博客使用了 Travis CI自动构建部署，并成功发布了第一篇文章
 
 #### 2018/12/17  &emsp;新博客诞生
-网址为 Github 地址：https://cc-ch.github.io
+网址为 Github 地址：https://vscchencc.github.io/
 
 #### 致谢
 感谢您花时间阅读我的博客，希望能和大家成为朋友

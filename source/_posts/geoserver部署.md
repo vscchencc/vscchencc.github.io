@@ -23,12 +23,12 @@ Tomcat会自动帮我们解压war包，然后我们将war包删除，开始修�
 ### 2、打开geoserver目录下webapps\geoserver\web-inf中的web.xml
 
 ### 3、添加过滤器代码
-
+```xml
     <filter>
 	    <filter-name>CORS</filter-name>
 	    <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
     </filter>
-
+```
 ### 4、添加过滤器路由代码：
 
     <filter-mapping>

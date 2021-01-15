@@ -1,5 +1,5 @@
 ---
-title: 事件捕捉、 事件冒泡
+title: JS事件捕捉、 事件冒泡
 date: 2019-3-11 14:54:25
 categories: JavaScript 
 top: false
@@ -13,7 +13,7 @@ top: false
 ## 事件流
 首先我们要理解事件流，即JavaScript中，事件触发的这一系列的流程
 
-![事件流](/images/capture.png)
+![事件流](capture.png)
 
 ## 事件捕获 (event capturing)
 

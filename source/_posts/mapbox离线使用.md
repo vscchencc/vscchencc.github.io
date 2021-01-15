@@ -56,12 +56,17 @@ mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太
 
 首先，将sprite，glyphs替换为本地环境。
 
+```json
+{
     "version": 8,
     "sprite": "http://172.16.43.88:8082/sprites/sprite",
     "glyphs": "/assets/fonts/{fontstack}/{range}.pbf",
+}
+```
 
 其中fontstack代表字体文件夹名称，range代表当前字体文件名称（mapbox会根据当前zoom和地图自自动匹配）
-
+```json
+{
     "layout": {
         "text-field": "{name}",
         "text-font": [
@@ -84,12 +89,15 @@ mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太
             ]
         }
     },
+}
+```
 
 text-font下的Microsoft YaHei 为字体文件夹名称
 
 其次，需要添加sources,sources为geoserver返回的地图数据。
 
-
+```json
+{
      "sources": {
         "waterways": {
             "type": "vector",
@@ -98,12 +106,17 @@ text-font下的Microsoft YaHei 为字体文件夹名称
                 "http://172.16.43.88:8088/geoserver/gwc/service/tms/1.0.0/chinamap%3Agis_osm_waterways_free_1@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf"
             ]
         }
-        ```
+        ...
     }
+}
+```
 
 这里的 http://172.16.43.88:8088/geoserver/gwc/service/tms/1.0.0/chinamap%3Agis_osm_waterways_free_1@EPSG%3A900913@pbf 是Geoserver 发布的tms服务，获取的矢量切片
+
 之前我们在geoserver中添加了waterways的图层，也介绍了geoserver服务能力及其tiles链接规范，我们就可以在sources中添加，type代表类型，我们是矢量切片选择vector，使用的是tms服务。下面我们看看如何编写waterways的样式。
 
+```json
+{
     //waterway
     {
         "id": "waterway",
@@ -138,6 +151,8 @@ text-font下的Microsoft YaHei 为字体文件夹名称
             ]
         }
     }
+}
+```
 
 需要注意的是filter需要根据数据库字段进行筛选，其他具体可以看mapbox官方文档。
 具体其他相关操作mapbox官网有相关的demo
