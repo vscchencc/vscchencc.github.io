@@ -46,21 +46,21 @@ top: false
 ![设置第二张网卡](eth1.jpg)
 
 ### 重启网络
-```[linux]
+```
     service network restart
 ```
 ### 关闭防火墙
 
 #### 查看防火墙状态
-```[linux]
+```
     firewall-cmd --state
 ```
 #### 停止firewall
-```[linux]
+```
     systemctl stop firewalld.service
 ```
 #### 禁止firewall 开机启动
-```[linux]
+```
     systemctl disable firewalld.service
 ```
 现在大家可以尝试ping一下网络，看看是否成功了
@@ -68,7 +68,7 @@ top: false
 ### 开启ssh
 
 因为我们一般不想直接在虚拟机中操作命令行，因为界面什么的看上去都不如xshell或者putty用起来舒服，于是我们就要开启 ssh 服务
-```[linux]
+```
     service sshd restart
 
     service sshd status
