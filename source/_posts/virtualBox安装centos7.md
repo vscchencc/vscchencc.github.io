@@ -2,6 +2,7 @@
 title: virtualBox安装centos7
 date: 2019-04-25 09:25:32
 tags: JavaScript 
+tags: 笔记
 top: false
 ---
 # virtualBox 安装 centOS7

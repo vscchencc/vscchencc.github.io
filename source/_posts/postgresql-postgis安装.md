@@ -2,6 +2,7 @@
 title: postgresql+postgis安装
 date: 2019-04-25 15:28:08
 categories: 地图可视化
+tags: 笔记
 top: false
 ---
 # 离线安装 postgresql 和配置 postgis 插件 在 redhat 7.3

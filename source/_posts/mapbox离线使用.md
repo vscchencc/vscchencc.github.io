@@ -2,6 +2,7 @@
 title: mapbox离线使用
 date: 2019-05-05 10:37:59
 categories: 地图可视化
+tags: 笔记
 top: false
 ---
 # mapbox离线使用

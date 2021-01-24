@@ -2,6 +2,7 @@
 title: JS事件捕捉、 事件冒泡
 date: 2019-3-11 14:54:25
 categories: JavaScript 
+tags: 笔记
 top: false
 ---
 # Javscript 事件捕捉、 事件冒泡

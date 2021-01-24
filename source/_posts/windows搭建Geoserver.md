@@ -1,6 +1,7 @@
 ---
 title: windows搭建Geoserver
 date: 2019-04-30 09:18:30
+tags: 笔记
 categories: 地图可视化
 ---
 # Windows搭建 Geoserver 和 postgis 环境
