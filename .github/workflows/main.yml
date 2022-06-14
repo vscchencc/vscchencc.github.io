@@ -29,7 +29,7 @@ jobs:
        # 设置 node.js 环境
         uses: actions/setup-node@v1
         with:
-          node-version: 'v16.14.0'
+          node-version: 'v12.14.0'
           
       - name: Cache node modules
       # 设置包缓存目录，避免每次下载
@@ -63,7 +63,6 @@ jobs:
           cd ./public && git init && git add .
           git config user.name "chencc"       #username改为你github的用户名
           git config user.email "932322877@qq.com"     #username改为你github的注册邮箱
-          git config --global init.defaultBranch master
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:master
