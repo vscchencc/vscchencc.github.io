@@ -60,7 +60,8 @@ jobs:
           GITHUB_REPO: github.com/vscchencc/vscchencc.github.io
          # 将编译后的博客文件推送到指定仓库
         run: |
-          cd ./public && git init && git add .
+          cd ./public && git init
+          git config --global init.defaultBranch master
           git config user.name "chencc"       #username改为你github的用户名
           git config user.email "932322877@qq.com"     #username改为你github的注册邮箱
           git add .
