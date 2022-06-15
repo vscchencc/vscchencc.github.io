@@ -63,7 +63,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           
-          git config user.name "chencc"       #username改为你github的用户名
-          git config user.email "932322877@qq.com"     #username改为你github的注册邮箱
+          git config --global user.name "chencc"       #username改为你github的用户名
+          git config --global user.email "932322877@qq.com"     #username改为你github的注册邮箱
           
           hexo deploy
