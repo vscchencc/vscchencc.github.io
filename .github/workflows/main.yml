@@ -40,8 +40,6 @@ jobs:
           
       # 配置Hexo环境 
       - name: Setup Hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
         run: |
           npm install hexo-cli -g
           npm install
@@ -53,11 +51,11 @@ jobs:
           hexo clean 
           hexo g
         
-      # 2、部署到 GitHub Pages
+      # 部署到 GitHub Pages
       - name: upload GitHub repository
         env: 
-          # Github 仓库
-          GITHUB_REPO: github.com/vscchencc/vscchencc.github.io.git
+          # Github token
+          ACTION_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
          # 将编译后的博客文件推送到指定仓库
         run: |
           mkdir -p ~/.ssh/
