@@ -76,5 +76,4 @@ jobs:
           # ali password
           ACTION_ALI_PASSWOED: ${{ secrets.ALIPASSWORD }}
         run: |
-          docker login --username=$ACTION_ALI_USERNAME registry.cn-hangzhou.aliyuncs.com -p $ACTION_ALI_PASSWOED
-      
+          echo "$ACTION_ALI_PASSWOED" | docker login --username=$ACTION_ALI_USERNAME registry.cn-hangzhou.aliyuncs.com --password-stdin      
