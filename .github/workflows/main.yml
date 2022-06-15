@@ -67,3 +67,14 @@ jobs:
           git config --global user.email "932322877@qq.com"     #username改为你github的注册邮箱
           
           hexo deploy
+          
+      # 打包镜像到aliyun
+      - name: build docker image
+        env: 
+          # ali username
+          ACTION_ALI_USERNAME: ${{ secrets.ALIUSERNAME }}
+          # ali password
+          ACTION_ALI_PASSWOED: ${{ secrets.ALIPASSWORD }}
+        run: |
+          docker login --username=$ACTION_ALI_USERNAME registry.cn-hangzhou.aliyuncs.com -p $ACTION_ALI_PASSWOED
+      
