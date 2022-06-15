@@ -90,7 +90,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/superchencc/chenccblog:latest
+          tags: ${{ secrets.ALIREGISTER }}/superchencc/chenccblog:latest
       
       # 打印 docker 镜像 SHA256 Hash 值
       - name: Image digest
