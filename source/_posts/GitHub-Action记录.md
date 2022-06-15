@@ -9,3 +9,5 @@ tags: 笔记
 <!-- more -->
 
 # hexo 使用GitHub Action 进行部署
+
+Hexo 使用的是 GitHub Pages，我选择了 dev 分支进行笔记记录，然后 push 到 dev 分支，然后 master 分支作为主分支，用于发布页面。
