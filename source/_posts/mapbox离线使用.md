@@ -5,14 +5,17 @@ categories: 地图可视化
 tags: 笔记
 top: false
 ---
-# mapbox离线使用
 
-## 一、mapbox-gl 介绍
+mapbox 是一个美国的地图服务供应商，在地图领域技术上是非常领先的。当时对于公司内部想使用 mapbox，但是又是服务于内网客户，于是研究了下mapbox的离线部署方案，这里做个记录，但是mapbox还在高速更新迭代中，这是基于当前能实现的一个方案，后面如果还在使用mapbox，或者继续研究的话，在继续记录吧。
+
+<!-- more -->
+
+## mapbox-gl 介绍
 mapbox是目前地图领域很领先的一家公司，已为 Foursquare、Pinterest、Evernote、金融时报、天气频道、优步科技 等公司的网站提供了订制在线地图服务。Mapbox 是一些开放源代码地图库及应用程序的创建者或最大的贡献者，其中包含了MBTiles 规范、TileMill 制图 IDE、Leaflet JavaScript 库，以及 CartoCSS 地图格式化语言与语法分析器等。对于web端前端 GIS渲染引擎是Mapbox GL JS。由于公司项目处于内网环境，无法访问mapbox的地图服务，因此需要对mapbox进行本地化，以满足公司项目的需求。
 
 https://www.mapbox.com/
 
-## 二、mapbox-gl 自定义样式
+## mapbox-gl 自定义样式
 
 * mapbox样式主要包括以上几个参数：
 * version：JS SDK对应版本必须为8，
@@ -23,13 +26,13 @@ https://www.mapbox.com/
 * layers：是对每个图层样式的描述，这里就是对地图样式渲染的关键，可以做定制化地图样式。
 具体参数及其api可以参考mapbox官网。
 
-## 三、离线部署
+## 离线部署
 
-### 1、mapbox-gl.js，mapbox-gl.css离线部署
+### mapbox-gl.js，mapbox-gl.css离线部署
 
 只需要从官网下载mapbox-gl.js，mapbox-gl.css到本地即可。
 
-### 2、glyphs字体本地化
+### glyphs字体本地化
 
 mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太了解，在此介绍一下.pbf文件，.pbf文件的全称为Protocol Buffers，是Google公司开发的一种数据描述语言，类似于XML能够将结构化数据序列化，可用于数据存储、通信协议等方面。简单来说就是结构简单、速度快，和JSON之间的对比可以参考使用 Protocol Buffers 代替 JSON 的五个原因。
 
@@ -37,7 +40,7 @@ mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太
 
 上面是微软雅黑的pbf字体库，如果想将把otf和ttf字体转换为Mapbox GL使用的protobuf格式的DF字体，可以使用mapbox开源的字体转换工具node-fontnik，具体使用方法可以参考官方文档
 
-### 3.sprite本地化
+### sprite本地化
 
 访问mapbox地图服务我们可以从网络请求中查看官方样式中的sprite
 
@@ -53,7 +56,7 @@ mapbox需要的字体为.pbf格式字体，可能很多人对于.pbf文件不太
 
 了解了mapbox是sprite原理以后，其本地化所要做的工作是将小图标合成一张sprite大图并在sprite.json中记录生成的位置信息，这里最主要的就是图标的摆放规则。
 
-## 四、地图样式编写
+## 地图样式编写
 
 首先，将sprite，glyphs替换为本地环境。
 

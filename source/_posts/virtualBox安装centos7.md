@@ -1,10 +1,14 @@
 ---
 title: virtualBox安装centos7
 date: 2019-04-25 09:25:32
-tags: JavaScript 
 tags: 笔记
 top: false
 ---
+
+在公司内部系统内虚拟化了一个 virtualBox 的虚拟机群，可以在上面折腾一系列的系统，来折腾折腾了，今天就折腾了一下 centos7 的安装，记录下。
+
+<!-- more -->
+
 # virtualBox 安装 centOS7
 最近一直在搞linux相关部署，搭建相关服务等。一直在公司服务器上操作，因为上面有部署服务，一直感觉玩的不好，就要玩出事。就想着在内网机上面搭建一个虚拟机装个centOS，学习一下相关知识，并且在上面试错。于是就有了下面这个在virtualBox上面搭建centOS7
 

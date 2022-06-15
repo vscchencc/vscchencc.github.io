@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: chencc's Blog
+title: 砚书の领域
 subtitle:
 description:
 keywords: 技术、随笔、笔记
 author: chencc
-language: zh-Hans
+language: zh-CN
 timezone:
 
 feed:
@@ -86,7 +86,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next-reloaded
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

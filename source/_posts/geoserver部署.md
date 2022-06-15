@@ -5,7 +5,13 @@ categories: 地图可视化
 tags: 笔记
 top: false
 ---
+
+Geoserver 地图服务部署，使用的打包后jar包，用tomcat的方式部署
+
+<!-- more -->
+
 # Tomcat部署 geoserver 服务
+
 ## 搭建 jdk Tomcat 等环境
 此处我已有了一套一键式在服务器上搭建jdk以及Tomcat环境的软件包，直接解压文件包，执行shell脚本即可。
 
@@ -19,27 +25,27 @@ Tomcat会自动帮我们解压war包，然后我们将war包删除，开始修�
 
 ## 修改跨域问题
 
-### 1、将cors-filter-2.4.jar和java-property-utils-1.9.1.jar，两个jar包文件放入geoserver目录下webapps\geoserver\web-inf\lib中
+### 将cors-filter-2.4.jar和java-property-utils-1.9.1.jar，两个jar包文件放入geoserver目录下webapps\geoserver\web-inf\lib中
 
-### 2、打开geoserver目录下webapps\geoserver\web-inf中的web.xml
+### 打开geoserver目录下webapps\geoserver\web-inf中的web.xml
 
-### 3、添加过滤器代码
+### 添加过滤器代码
 ```xml
     <filter>
 	    <filter-name>CORS</filter-name>
 	    <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
     </filter>
 ```
-### 4、添加过滤器路由代码：
+### 添加过滤器路由代码：
 
     <filter-mapping>
         <filter-name>CORS</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-### 5、添加完毕后，重启geoserver
+### 添加完毕后，重启geoserver
 
-### 6、如果目录中存在maven，需要在pom.xml中，添加
+### 如果目录中存在maven，需要在pom.xml中，添加
 
     <dependency>
 	    <groupId>com.thetransactioncompany</groupId>
@@ -57,7 +63,7 @@ Tomcat会自动帮我们解压war包，然后我们将war包删除，开始修�
 
 这样，Geoserver 服务搭建就完成了
 
-### 7. Geoserver 连接 postgis
+### Geoserver 连接 postgis
 
 ![setData](setData.jpg)
 

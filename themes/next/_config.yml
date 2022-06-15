@@ -65,6 +65,15 @@ footer:
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
+  beian:
+    enable: true
+    icp: 苏ICP备2021038748号-1
+    # The digit in the num of gongan beian.
+    gongan_id: 330xxx
+    # The full num of gongan beian.
+    gongan_num: 苏ICP备2021038748号
+    # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
+    gongan_icon_url: /images/beian_icon.png
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
