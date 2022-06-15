@@ -82,12 +82,17 @@ jobs:
           username: ${{ secrets.ALIUSERNAME }}
           password: ${{ secrets.ALIPASSWORD }}
 
-      # 打包镜像到aliyun
+      # build 并且 push docker 镜像
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./
+          file: ./Dockerfile
           push: true
-          tags: registry.cn-hangzhou.aliyuncs.com/superchencc/chenccblog:V1.0.0
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/superchencc/chenccblog:latest
+      
+      # 打印 docker 镜像 SHA256 Hash 值
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
 
